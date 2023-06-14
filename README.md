@@ -5,7 +5,7 @@ to build the project,run
 ```bash
 xmake
 ```
-to configure your msys2 env in xmake.lua
+to configure your msys2 env,edit the lines below in xmake.lua
 ```lua
 add_includedirs("your msys2 include dir")
 add_linkdirs("your msys2 lib dir")
