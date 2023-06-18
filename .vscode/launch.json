@@ -11,7 +11,7 @@
       "program": "${workspaceRoot}/build/mingw/x86_64/release/main.exe",
       "MIMode": "gdb",
       "miDebuggerPath": "${env:MSYS_PATH}\\mingw64\\bin\\gdb.exe",
-      "cwd":"${workspaceFolder}",
+      "cwd":"${workspaceFolder}/build/mingw/x86_64/release",
       "setupCommands": [
         {
           "description": "pretty-printing",

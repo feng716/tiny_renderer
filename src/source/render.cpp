@@ -21,7 +21,8 @@ void line(pt a, pt b, COLORREF color){
 void objLoader(char* fileName, Model& m){
   std::ifstream in;
   in.open(fileName,std::ifstream::in);
-  if(in.fail()) return;
+  if(in.fail()) {printf("failed to load");return;}
+  printf("successfully loaded");
   std::string line;
   while (!in.eof()) {
     std::getline(in,line);

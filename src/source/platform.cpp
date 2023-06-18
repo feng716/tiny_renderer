@@ -57,7 +57,7 @@ HWND createDefaultWindow(HINSTANCE hInstance) {
     hwnd = CreateWindow("blackWindow", TEXT("Tiny Renderer"), WS_OVERLAPPEDWINDOW,
                      CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
                      NULL, NULL, hInstance, NULL);
-    objLoader("./african_head.obj",mA);
+    objLoader("african_head.obj",mA);
     mA.faceV.push_back(face(0,0,0));
     return hwnd;
 }

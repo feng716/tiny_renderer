@@ -10,4 +10,4 @@ target("main")
     add_links("gdi32")
 
     --debug
-    add_cxflags("-g","-O3")
+    add_cxflags("-g")
