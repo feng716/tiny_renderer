@@ -9,8 +9,16 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceRoot}/build/mingw/x86_64/release/main.exe",
+      "MIMode": "gdb",
       "miDebuggerPath": "${env:MSYS_PATH}\\mingw64\\bin\\gdb.exe",
       "cwd":"${workspaceFolder}",
+      "setupCommands": [
+        {
+          "description": "pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
     }
   ]
 }
