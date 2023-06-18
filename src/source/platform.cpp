@@ -11,6 +11,7 @@
 #include <list>
 
 HDC hdc;
+Model mA;
 //std::vector<void*()> func;
 std::list<renderCommand> l_rC;
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam,
@@ -21,7 +22,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam,
     case WM_PAINT: 
       hdc = BeginPaint(hwnd, &ps);
       line(pt(100,100), pt(120,130), RGB(255,255,255));
-      line(pt(120,120), pt(100,0), RGB(255,0,0));
+      line(pt(100,100), pt(10,0), RGB(255,0,0));
       //TextOut(hdc,0,50,"tiny_renderer",strlen("tiny_renderer"));
       EndPaint(hwnd, &ps);
       break;
@@ -56,6 +57,8 @@ HWND createDefaultWindow(HINSTANCE hInstance) {
     hwnd = CreateWindow("blackWindow", TEXT("Tiny Renderer"), WS_OVERLAPPEDWINDOW,
                      CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
                      NULL, NULL, hInstance, NULL);
+    objLoader("./african_head.obj",mA);
+    mA.faceV.push_back(face(0,0,0));
     return hwnd;
 }
 
