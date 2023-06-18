@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  
+  "tasks": [
+    {
+      "label": "build",
+      "command": "${workspaceFolder}/build.sh",
+      "type": "shell",
+      "args": [],
+      "presentation": {
+        "reveal": "always"
+      },
+      "group": "build",
+      "options": {
+        "shell": {
+          "executable": "${env:MSYS_PATH}/usr/bin/bash.exe",
+          "args": [
+            "--login",
+            "-i"
+          ]
+        }
+      },
+    }
+  ]
+}
